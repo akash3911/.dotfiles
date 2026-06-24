@@ -49,35 +49,8 @@ end
 
 return {
     {
-        'mrcjkb/rustaceanvim',
+        'neovim/nvim-lspconfig',
         init = function()
-            vim.g.rustaceanvim = {
-                -- DAP configuration
-                dap = {},
-                -- LSP configuration
-                server = {
-                    on_attach = on_attach,
-                    default_settings = {
-                        ['rust-analyzer'] = {
-                            cargo = {
-                                buildScripts = {
-                                    enable = true,
-                                },
-                            },
-                            diagnostics = {
-                                enable = false,
-                            },
-                            files = {
-                                excludeDirs = { ".direnv", ".git" },
-                                watcherExclude = { ".direnv", ".git" },
-                            },
-                        },
-                    },
-                },
-                -- Plugin configuration
-                tools = {},
-            }
-
             local language_servers = {
                 bashls = {},
                 cssls = {},
@@ -162,6 +135,37 @@ return {
             vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1, float = true }) end)
             vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1, float = true }) end)
             vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+        end,
+    },
+    {
+        'mrcjkb/rustaceanvim',
+        init = function()
+            vim.g.rustaceanvim = {
+                -- DAP configuration
+                dap = {},
+                -- LSP configuration
+                server = {
+                    on_attach = on_attach,
+                    default_settings = {
+                        ['rust-analyzer'] = {
+                            cargo = {
+                                buildScripts = {
+                                    enable = true,
+                                },
+                            },
+                            diagnostics = {
+                                enable = false,
+                            },
+                            files = {
+                                excludeDirs = { ".direnv", ".git" },
+                                watcherExclude = { ".direnv", ".git" },
+                            },
+                        },
+                    },
+                },
+                -- Plugin configuration
+                tools = {},
+            }
         end,
     },
     {
