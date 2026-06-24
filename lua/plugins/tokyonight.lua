@@ -48,7 +48,7 @@ return {
             vim.cmd([[colorscheme tokyonight-night]])
         end,
         init = function()
-            local settings = {
+            local settings_o = {
                 clipboard = 'unnamedplus',
                 colorcolumn = '80',
                 expandtab = true,
@@ -61,11 +61,11 @@ return {
                 updatetime = 300
             }
 
-            for k, v in pairs(settings) do
+            for k, v in pairs(settings_o) do
                 vim.o[k] = v
             end
 
-            local settings = {
+            local settings_wo = {
                 foldexpr = 'nvim_treesitter#foldexpr()',
                 foldlevel = 99,
                 foldmethod = 'expr',
@@ -74,7 +74,7 @@ return {
                 wrap = false
             }
 
-            for k, v in pairs(settings) do
+            for k, v in pairs(settings_wo) do
                 vim.wo[k] = v
             end
 
@@ -83,7 +83,7 @@ return {
             vim.opt.listchars:append 'eol:↴'
             vim.opt.splitkeep = 'screen'
 
-            local options = {noremap = false, silent = true}
+            local options = { noremap = false, silent = true }
 
             vim.keymap.set('n', '<leader>h', '<CMD>wincmd h<CR>', options)
             vim.keymap.set('n', '<leader>j', '<CMD>wincmd j<CR>', options)

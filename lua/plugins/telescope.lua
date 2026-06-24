@@ -35,9 +35,12 @@ return {
         telescope.load_extension('notify')
         telescope.setup(opts)
 
+        local options = { noremap = false, silent = true }
+
         -- Builtin
         vim.keymap.set('n', '<leader>fg', '<CMD>lua require("telescope.builtin").git_files{}<CR>', options)
-        vim.keymap.set('n', '<leader>ff', '<CMD>lua require("telescope.builtin").find_files{ hidden = true }<CR>', options)
+        vim.keymap.set('n', '<leader>ff', '<CMD>lua require("telescope.builtin").find_files{ hidden = true }<CR>',
+            options)
         vim.keymap.set('n', '<leader>fl', '<CMD>lua require("telescope.builtin").live_grep()<CR>', options)
         vim.keymap.set('n', '<leader>fb', '<CMD>lua require("telescope.builtin").buffers()<CR>', options)
         vim.keymap.set('n', '<leader>fh', '<CMD>lua require("telescope.builtin").help_tags()<CR>', options)

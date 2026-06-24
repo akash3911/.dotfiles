@@ -169,7 +169,7 @@ return {
         end,
     },
     {
-          "NoahTheDuke/vim-just",
-          ft = { "just" },
+        "NoahTheDuke/vim-just",
+        ft = { "just" },
     }
 }
