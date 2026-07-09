@@ -50,7 +50,7 @@ return {
         init = function()
             local settings_o = {
                 clipboard = 'unnamedplus',
-                colorcolumn = '80',
+                colorcolumn = '',
                 expandtab = true,
                 scrolloff = 3,
                 shiftwidth = 4,
