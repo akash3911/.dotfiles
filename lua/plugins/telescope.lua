@@ -14,7 +14,7 @@ return {
                 'node_modules/.*',
                 'secret.d/.*'
             },
-            layout_strategy = 'flex',
+            layout_strategy = 'horizontal',
             layout_config = {
                 horizontal = {
                     prompt_position = 'top',
@@ -23,9 +23,9 @@ return {
                 vertical = {
                     mirror = false
                 },
-                width = 0.87,
-                height = 0.8,
-                preview_cutoff = 120,
+                width = 0.95,
+                height = 0.90,
+                preview_cutoff = 0,
             },
         }
     },
@@ -39,7 +39,7 @@ return {
 
         -- Builtin
         vim.keymap.set('n', '<leader>fg', '<CMD>lua require("telescope.builtin").git_files{}<CR>', options)
-        vim.keymap.set('n', '<leader>ff', '<CMD>lua require("telescope.builtin").find_files{ hidden = true }<CR>',
+        vim.keymap.set('n', '<leader>ff', '<CMD>lua require("telescope.builtin").find_files()<CR>',
             options)
         vim.keymap.set('n', '<leader>fl', '<CMD>lua require("telescope.builtin").live_grep()<CR>', options)
         vim.keymap.set('n', '<leader>fb', '<CMD>lua require("telescope.builtin").buffers()<CR>', options)
