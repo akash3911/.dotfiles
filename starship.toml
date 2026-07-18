@@ -1,0 +1,128 @@
+add_newline = true
+
+format = "$username$hostname$all"
+
+[username]
+show_always = true
+format = "[$user](bold green)"
+
+[hostname]
+ssh_only = false
+format = "[@$hostname](bold green):"
+
+[directory]
+#symbol = " "
+truncation_length = 0
+truncate_to_repo = false
+format = "[$path](bold blue) "
+
+[git_branch]
+symbol = " "
+
+[git_status]
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+up_to_date = "✓"
+untracked = "?"
+stashed = "$"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+conflicted = "="
+
+[python]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[java]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[package]
+symbol = "󰏗 "
+
+[aws]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[jobs]
+symbol = " "
+
+[cmd_duration]
+format = "[󰔛 $duration]($style)"
+
+[character]
+success_symbol = "[❯](bold purple)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](bold green)"
+
+[directory.substitutions]
+"Desktop" = "󰍹"
+"Downloads" = "󰉍"
+"Documents" = "󰈙"
+"Pictures" = "󰉏"
+"Music" = "󰝚"
+"Videos" = "󰕧"
+
+[container]
+symbol = " "
+
+[kubernetes]
+disabled = false
+symbol = "☸ "
+
+[terraform]
+symbol = "󱁢 "
+
+[gradle]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cpp]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[dotnet]
+symbol = "󰪮 "
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[zig]
+symbol = " "
+
+[nix_shell]
+symbol = " "
